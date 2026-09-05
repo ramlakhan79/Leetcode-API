@@ -12,6 +12,23 @@ router.get("/:username", async (req, res) => {
             difficulty
             count
         }
+        userProfileUserQuestionProgressV2(userSlug: $username) {
+
+            numAcceptedQuestions {
+                count
+                difficulty
+            }
+
+            numFailedQuestions {
+                count
+                difficulty
+            }
+
+            numUntouchedQuestions {
+                count
+                difficulty
+            }
+        }
         matchedUser(username: $username) {       
           username
           profile {
