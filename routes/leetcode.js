@@ -8,9 +8,12 @@ router.get("/:username", async (req, res) => {
 
     const query = `
       query getUserDetails($username: String!, $year: Int) {
-        matchedUser(username: $username) {
+       allQuestionsCount {
+            difficulty
+            count
+        }
+        matchedUser(username: $username) {       
           username
-
           profile {
             realName
             aboutMe
